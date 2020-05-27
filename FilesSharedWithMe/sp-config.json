@@ -1,0 +1,33 @@
+{
+
+	 "scriptPortletServer": "http://portal.com",
+
+	 "laxSSL": true,
+
+	 "performAuth": true,
+
+	 "portalUser": "****",
+
+	 "portalPassword": "****",
+
+	 "mainHtmlFile": "index.html",
+
+
+	"wcmSiteArea": "Script Portlet Library/Script Portlet Applications/",
+
+
+	"excludes": [
+		"^bin$",
+		"^lib$",
+		"^src$",
+		"^\\.classpath$",
+		"^\\.project$",
+		"^sp-config.json$",
+		"^sp-cmdln.log$",
+		"^sp.bat$",
+		"^sp.sh$",
+	],
+
+	   "wcmContentName": "Connections Files Shared with Me"
+
+}

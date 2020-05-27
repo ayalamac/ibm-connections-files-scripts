@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+
+  <!-- change the communityUuid variable to point to the Community you want to use -->
+  <script type="text/javascript">
+    //var communityUuid = "c58cca08-3091-435a-b8d8-d5ac08eb662e";
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+
+  <script type="text/javascript">
+    if (typeof jQuery == 'undefined') {
+      document.write("<scr" + "ipt type='text/javascript' src='//code.jquery.com/jquery-3.0.0.min.js'></scr" + "ipt>");
+    }
+  </script>
+  <script type="text/javascript" src="js/jstree.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+
+</head>
+
+<body>
+
+<div class="lotusui30"><h1 class="srListTitle">Connections Files Shared With Me</h1></div>
+
+  <br>
+
+  <div id="filesTree__SPNS__">
+    Please Wait...<br/><img src="images/ajax-loader.gif">
+  </div>
+
+
+
+  <script>
+  // get the Connections server name from WAS
+  var cProfiles__SPNS__ = '[Plugin:ConnectionsContext type="service" key="profiles"][/Plugin:ConnectionsContext]';
+  var connectionsHost__SPNS__;
+  if (cProfiles__SPNS__.indexOf('http://') > -1) {
+    connectionsHost__SPNS__ = cProfiles__SPNS__.replace('http://','').replace('/profiles','');
+  } else {
+    connectionsHost__SPNS__ = cProfiles__SPNS__.replace('https://','').replace('/profiles','');
+  }
+  if ( !connectionsHost__SPNS__ ) {
+    connectionsHost__SPNS__ = 'tsc.ibmcollabcloud.com';
+  }
+  </script>
+
+</body>
+
+</html>
